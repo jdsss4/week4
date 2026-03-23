@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>프롤로그</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+
+
+	<style>
+
+		header{padding-top: 210px; padding-bottom: 300px;}
+				
+		.contents{width: 800px; margin: auto; padding: 100px 0px;}
+
+		.title{font-size: 150px; color: fuchsia;}
+
+		.subtitle{font-size: 30px; word-break: keep-all; line-break: strict; padding: 30px 0px;}
+
+		.text{font-size: 20px; font-weight: normal; word-break: keep-all; line-break: strict; padding: 20px 0px; line-height:1.9;}
+
+		.center{text-align: center;}
+
+		.backdrop{backdrop-filter: blur(20px);}
+
+		.bg1{background: url(waterfall3.jpg); background-size: cover; background-attachment: fixed;}
+
+		.bg2{background: url(paperrip1.jpg); background-size: cover; background-position-y: 56%;}
+
+		.bg4{background: url(flameup1.jpg); background-size: cover; background-attachment: fixed; background-position-y: 40%;}
+
+		.bg5{background-color: aqua;}
+
+		.bg7{background: url(road1.jpg); background-size: cover; background-attachment: fixed; background-position-y: 50%;}
+
+		.aqua{color: aqua;}
+
+		.white{color: white;}
+
+		.gold{color: gold;}
+
+		.container {
+			position: relative;
+			width: 100%;
+		}
+
+		.text-overlay {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width:800px;
+		}
+
+		.gowun-batang-regular {
+			font-family: "Gowun Batang", serif;
+  			font-weight: 400;
+  			font-style: normal;
+		}
+		.gowun-batang-bold {
+  			font-family: "Gowun Batang", serif;
+  			font-weight: 700;
+  			font-style: bold;
+  		}
+  		.liu-jian-mao-cao-regular {
+  			font-family: "Liu Jian Mao Cao", cursive;
+  			font-weight: 400;
+  			font-style: normal;
+		}
+
+		body, h1, h2, h3, p{margin: 0; padding: 0;}
+
+		h1, h2{font-family: 'Gowun Batang', serif; font-style: bold}
+		h3{font-family: "Liu Jian Mao Cao", cursive;}
+		p{font-family: 'Gowun Batang', serif; font-style: normal}
+
+		h2, h3, p{word-break: keep-all; line-break: strict;}
+	
+	    .bg3 {
+	        position: relative;
+	        view-timeline-name: --section-scroll;
+	        view-timeline-axis: block;
+	        
+	        background: linear-gradient(to bottom, #ffffff, #87ceeb 20%, #0077be);
+	        overflow: hidden;
+	    }
+
+	    .bg6 {
+	        position: relative;
+	        view-timeline-name: --section-scroll;
+	        view-timeline-axis: block;
+	        
+	        background-color: chartreuse;
+
+	        overflow: hidden;
+	    }
+
+	    .splash-container {
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 40vh;
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        pointer-events: none;
+	        z-index: 10;
+	    }
+
+	    .water-splash {
+	        width: 40px;
+	        height: 40px;
+	        border-radius: 50%;
+	        background: rgba(255, 255, 255, 0.5);
+	        border: 2px solid rgba(255, 255, 255, 0.8);
+	        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+	                    inset 0 0 10px rgba(255, 255, 255, 0.3);
+	        
+	        opacity: 0;
+
+	        animation: splash-sequence linear both;
+	        animation-timeline: --section-scroll;
+	        
+	        animation-range: cover 0% cover 100%;
+	    }
+
+	    @keyframes splash-sequence {
+	        10% {
+	            transform: translateY(-100px) scale(0.2);
+	            opacity: 0;
+	        }
+	        25% {
+	            opacity: 1;
+	            transform: translateY(0) scale(1);
+	        }
+	        45% {
+	            background: rgba(255, 255, 255, 0.2);
+	            transform: scale(5);
+	            opacity: 0.9;
+	        }
+	        100% {
+	            transform: scale(30);
+	            opacity: 0;
+	            filter: blur(20px);
+	        }
+	    }
+
+		.my-section{
+		  position: relative;
+		  max-width: 800px;
+		  margin: 300px auto;
+		  padding: 30px;
+		  color: white;
+		  z-index: 1;
+		}
+
+		.my-section::before{
+		  content: "";
+		  position: absolute;
+		  
+		  top: -40px; 
+		  bottom: -40px;
+		  left: -160px;
+		  right: -160px;
+		  
+		  background-image: url('desk2.png');
+		  background-size: 100%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+
+		  z-index: -1; 
+		  
+		  transform: rotate(28deg);
+		}
+
+		.my-section2{
+		  position: relative;
+		  max-width: 800px;
+		  margin: 300px auto;
+		  padding: 30px;
+		  color: darkgreen;
+		  z-index: 1;
+		}
+
+		.my-section2::before{
+		  content: "";
+		  position: absolute;
+		  
+		  top: 0px; 
+		  bottom: -400px;
+		  left: 0px;
+		  right: -800px;
+		  
+		  background-image: url('handplant1.png');
+		  background-size: 60%;
+		  background-position: right;
+		  background-repeat: no-repeat;
+
+		  z-index: -1; 
+		  
+		  transform: rotate(-45deg);
+		}
+
+		html {overflow-x: hidden;}
+
+		.fuse {
+		  position: sticky;
+		  top: 50%;
+
+		  height: 6px;
+		  width: 100%;
+		  background: linear-gradient(to right, orange, red);
+
+		  transform-origin: left;
+
+		  animation: burn linear forwards;
+		  animation-timeline: --section;
+
+		  animation-range: entry 100% exit 100%;
+		}
+
+		@keyframes burn{
+	 		from{transform: scaleX(1);}
+		 	to{transform: scaleX(0.2);}
+		}
+
+	</style>
+
+</head>
+<body>
+	<header class="bg1">
+		<div class="contents">
+			<h1 class="title center">프롤로그</h1>
+		</div>
+	</header>
+
+	<section class="bg2">
+		<div class="contents aqua">
+			<h2 class="subtitle center" style="padding-top: 140px;">에이번은 그대로 굳어 버렸다.</h2>
+			<p class="text center" style="padding-left:110px; width:580px;">가슴 깊은 곳에서부터 불안이 밀려올랐다. 도대체 무슨 생각으로 종이를 그렇게 만지고 있었던 걸까? 아무 생각 없이 올려 두었던 손이 답안지 위에 너무 오래 머물러 있었다. 그녀는 천천히 손을 들어 올렸지만 이내 얼굴을 찡그렸다. 젖어 버린 종이가 손바닥에 달라붙어 얼룩을 따라 조용히 찢어졌다.</p>
+			<p class="text center" style="padding-top: 650px; padding-left:100px; padding-bottom: 150px; width:600px;">그녀는 스스로 인정하고 있었다. 최근 들어 조금 방심하고 있었다는 사실을. 체질 문제가 아니었다. 단지 경계심이 느슨해졌을 뿐이었다. 어차피 지금까지의 성적만으로도 그녀는 순위에서 압도적으로 앞서 있었다. 남은 몇 번의 시험은 사실상 큰 의미가 없었다. 물론, 말도 안 되는 재난이라도 벌어지지 않는 한 말이다. 지금처럼.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="contents center">
+			<img src="siren5.gif" style="padding-top: 100px;">
+			<h2 class="subtitle" style="padding-top: 70px;">"5분 남았습니다!"</h2>
+			<p class="text">감독 교사의 목소리가 교실을 가르며 울렸다.</p>
+			<p class="text">새 종이에 옮겨 적기에는 시간이 턱없이 부족했다.</p>
+			<p class="text" style="padding-left: 100px; padding-bottom: 50px; width: 600px;">‘아직 괜찮아.’ 에이번은 스스로를 다독였다. 손상은 아직 본문까지 번지지 않았다. 찢어진 것은 머리글과 제목 부분뿐이었다. “사라진 시대의 문자들.” 일그러졌지만 여전히 읽을 수 있었다.</p>
+		</div>
+	</section>
+
+	<section class="bg3">
+		<div class="contents white">
+			<h2 class="subtitle center" style="padding-top: 200px; padding-left: 150px; width: 500px;">초조한 마음으로 그녀는 펜을 내려놓고 손을 떼었다.</h2>
+
+			<div class="splash-container">
+    	        <div class="water-splash"></div>
+        	</div>
+
+			<p class="text" style="width: 500px;">바로 그 순간, 땀에 젖은 손바닥에서 물방울 하나가 떨어졌다. 툭. 종이 한가운데에 정확히. 그녀는 짜증스럽게 젖은 손을 치마에 문질렀다. ‘한 방울쯤이야. 금방 마르겠지.’ 그녀는 그 작은 물방울을 노려보았다.</p>
+			<p class="text">그런데 이상했다.</p>
+			<p class="text" style="width: 500px;">물방울은 예상보다 훨씬 빠르게 줄어들더니 곧 흔적도 없이 사라졌다. ‘어?’ 그녀가 의아하게 바라보는 사이, 물방울 아래에 있던 글자가 서서히 주황빛으로 빛나기 시작했다. 다음 순간, 글자가 번쩍이며 불꽃이 튀어 올랐다.</p>
+		</div>
+	</section>
+
+	<section class="bg4">
+		<div class="backdrop">
+			<div class="contents white">
+				<h2 class="subtitle" style="padding-top: 200px; padding-left: 300px; width: 500px;">에이번은 거의 비명을 지를 뻔했다.</h2>
+				<p class="text" style="padding-left: 300px; width: 500px;">급히 고개를 돌려 주변을 살폈지만 교실의 학생들은 모두 시험지에만 몰두하고 있었다. 그 사이에 작은 불꽃은 점점 원을 그리며 번져 나갔고, 종이에는 검게 그을린 구멍이 생겨났다. 그제야 그녀는 그 글자가 무엇이었는지 떠올렸다.</p>
+				<img src="whitefire.png" style="padding-left: 250px; padding-top: 100px; padding-bottom: 50px; width: 200px;">
+				<p class="text" style="padding-left: 300px; width: 500px;">불. 그 문자는 불을 뜻하는 고대의 상형 문자였다.</p>
+				<p class="text" style="padding-bottom: 100px; padding-left: 300px; width: 500px;">멍해진 채 그녀는 그 광경을 바라보았다. 논리와 과학이 자리 잡기 전, 먼 옛날의 문자들. 시골 사람들은 이런 글자들이 단순한 의미 이상의 것을 담고 있다고 믿었다. 문자가 표현하는 개념의 본질 자체를 품고 있다고. 에이번은 늘 그런 이야기를 미신이라 여겼다. 적어도 지금 이 순간까지는.</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="contents center">
+			<h2 class="subtitle" style="padding-top: 100px;">하지만</h2>
+			<p class="text">그녀의 감탄 따위는 아랑곳하지 않고 불꽃은 계속 번져 나가며 소중한 문장들을 갉아먹고 있었다. 정신을 차린 그녀는 급히 다른 문자를 찾기 시작했다. 물을 뜻하는 글자였다.</p>
+			<img src="blackwater.png" style="width: 200px; padding-top: 100px;">
+			<p class="text">거기 있었다.</p>
+			<p class="text">잠시 망설이다가 그녀는 손가락을 그 글자 위에 가져갔다. ‘말도 안 돼.’ 그렇게 중얼거리면서도 그녀의 손끝은 이미 글자에 닿고 있었다.</p>
+		</div>
+	</section>
+
+	<section class="bg5">
+		<div class="contents my-section">
+			<h2 class="subtitle" style="padding-top: 40px; padding-left: 300px; width: 500px;">순간</h2>
+			<p class="text" style="padding-left: 300px; width: 500px;">글자에서 물이 솟구쳐 올랐다.</p>
+			<p class="text" style="padding-left: 300px; width: 500px;">작은 원형 파동이 번지더니 종이 위로 물이 퍼져 나갔다. 에이번은 발로 책상을 살짝 기울였다. 책상이 삐걱거리며 움직였고 물이 불꽃 쪽으로 흘렀다. 몇 번이나 방향을 조정한 끝에 마침내 불꽃은 꺼졌다.</p>
+			<p class="text" style="padding-bottom: 60px; padding-left: 300px; width: 500px;">그녀는 아래를 내려다보았다. 엉망이었다. 주먹만 한 구멍이 뚫려 있었고 물이 번져 잉크가 흐릿하게 번지고 있었다.</p>
+		</div>
+	</section>
+
+	<section style="padding-top: 100px;">
+		<div class="contents" style="padding-bottom: 0px; view-timeline-name: --section; view-timeline-axis: block;">
+			<div class="fuse"></div>
+		</div>
+	</section>
+
+	<section>
+		<div class="contents" style="padding-top: 50px;">
+			<h2 class="subtitle">"1분 남았습니다!"</h2>
+			<p class="text">감독 교사의 외침이 들렸다.</p>
+			<p class="text" style="padding-top: 100px; width: 500px;">에이번의 머릿속은 미친 듯이 돌아가고 있었고 심장 역시 그에 맞춰 빠르게 뛰고 있었다. 이 기묘한 현상이 무엇이든 간에 지금 그녀를 구해 줄 유일한 방법이어야 했다. 하지만 어떻게? 그녀는 가능한 단어들을 떠올렸다.</p>
+			<h3 class="text">‘初期化’</h3>
+			<p class="text">하지만 그건 종이를 완전히 백지로 되돌려 버릴 것 같았다.</p>
+			<h3 class="text">‘再建’</h3>
+			<p class="text">어딘가 어색했다.</p>
+			<p class="text">결국 그녀는 답안지의 멀쩡한 구석에 크게 글자를 썼다.</p>
+			<img src="restoreglyph.png" style="padding-left: 300px; width: 500px;">
+		</div>
+	</section>
+
+	<section class="bg6">
+		<div class="contents my-section2">
+			<h2 class="subtitle" style="padding-top: 100px; padding-left: 200px; width: 500px;">‘복원하다.’</h2>
+			<p class="text" style="padding-left: 200px; width: 500px;">땀으로 젖은 손바닥을 그 글자 위에 힘껏 눌렀다. 기적을 간절히 바라면서. 손바닥 아래에서 수분이 빨려 들어가는 것이 느껴졌다. 그리고 보이지 않는 파동이 글자에서 퍼져 나갔다.</p>
+			<p class="text" style="padding-bottom: 100px; padding-left: 200px; width: 500px;">마치 회복의 바람이 스쳐 지나간 것처럼 종이가 가볍게 펄럭였다. 젖은 얼룩이 말라가며 펴졌고 구겨졌던 종이가 매끄럽게 정리되었다. 불로 생겼던 구멍은 천천히 메워졌고 사라졌던 문장들이 다시 모습을 드러냈다. 처음 찢어졌던 자리까지 완전히 아물어 답안지는 다시 온전한 모습으로 돌아왔다.</p>
+		</div>
+	</section>
+
+	<section class="bg7">
+		<div class="contents gold">
+			<h2 class="subtitle" style="padding-top: 100px;">그 순간 감독 교사가 손뼉을 쳤다.</h2>
+			<p class="text">“시간 종료입니다. 펜을 내려놓으세요.”</p>
+			<p class="text">에이번은 의자에 몸을 기대며 길게 숨을 내쉬었다. 책상 위에 놓인 평범한 종이 한 장. 겉으로 보기에는 조금 전의 혼란이 조금도 남아 있지 않았다. 하지만 그녀는 알고 있었다.</p>
+			<p class="text" style="padding-bottom: 350px;">오늘 이후로, 자신의 세계가 완전히 달라졌다는 사실을.</p>
+		</div>
+	</section>
+
+
+	<section></section>
+
+	<footer></footer>
+</body>
+</html>
